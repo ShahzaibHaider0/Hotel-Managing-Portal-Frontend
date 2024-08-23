@@ -18,7 +18,7 @@ const ManageEmployees = () => {
   // Fetch employees from API
   useEffect(() => {
     axios
-      .get("https://glimmer-petal-ceder.glitch.me/api/employees/", {
+      .get("https://backend-seven-lake-45.vercel.app/api/employees/", {
         withCredentials: true, })
       .then((response) => {
         setEmployees(response.data);
@@ -47,7 +47,7 @@ const ManageEmployees = () => {
     e.preventDefault();
     axios
       .put(
-        `https://glimmer-petal-ceder.glitch.me/api/employees/${selectedEmployee._id}`,
+        `https://backend-seven-lake-45.vercel.app/api/employees/${selectedEmployee._id}`,
         formData , {
           withCredentials: true, }
   
@@ -75,7 +75,7 @@ const ManageEmployees = () => {
   // Handle employee deletion
   const handleDeleteEmployee = (id) => {
     axios
-      .delete(`https://glimmer-petal-ceder.glitch.me/api/employees/${id}`, {
+      .delete(`https://backend-seven-lake-45.vercel.app/api/employees/${id}`, {
         withCredentials: true, }
 )
       .then(() => {
@@ -98,7 +98,7 @@ const ManageEmployees = () => {
   const handleAddEmployee = (e) => {
     e.preventDefault();
     axios
-      .post("https://glimmer-petal-ceder.glitch.me/api/employees/", formData, {
+      .post("https://backend-seven-lake-45.vercel.app/api/employees/", formData, {
         withCredentials: true, }
 )
       .then((response) => {

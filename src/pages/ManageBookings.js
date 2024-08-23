@@ -6,7 +6,7 @@ const ManageBookings = () => {
 
   useEffect(() => {
     axios
-      .get("https://glimmer-petal-ceder.glitch.me/api/bookings/", {
+      .get("https://backend-seven-lake-45.vercel.app/api/bookings/", {
         withCredentials: true, })
       .then((response) => {
         setBookings(response.data);
@@ -16,7 +16,7 @@ const ManageBookings = () => {
 
   const handleApprove = (_id) => {
     axios
-      .post(`https://glimmer-petal-ceder.glitch.me/api/bookings/approve/${_id}`, {
+      .post(`https://backend-seven-lake-45.vercel.app/api/bookings/approve/${_id}`, {
         withCredentials: true, })
       .then(() => {
         setBookings(
@@ -30,7 +30,7 @@ const ManageBookings = () => {
 
   const handleReject = (_id) => {
     axios
-      .post(`https://glimmer-petal-ceder.glitch.me/api/bookings/reject/${_id}`, {
+      .post(`https://backend-seven-lake-45.vercel.app/api/bookings/reject/${_id}`, {
         withCredentials: true, })
       .then(() => {
         setBookings(

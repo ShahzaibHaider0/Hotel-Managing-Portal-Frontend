@@ -24,7 +24,7 @@ const ManageRooms = () => {
 
   const fetchRooms = async () => {
     try {
-      const response = await axios.get("https://glimmer-petal-ceder.glitch.me/api/rooms/", {
+      const response = await axios.get("https://backend-seven-lake-45.vercel.app/api/rooms/", {
         withCredentials: true, }
 );
       setRooms(response.data);
@@ -42,7 +42,7 @@ const ManageRooms = () => {
 
   const handleDelete = async (roomId) => {
     try {
-      await axios.delete(`https://glimmer-petal-ceder.glitch.me/api/rooms/${roomId}`, {
+      await axios.delete(`https://backend-seven-lake-45.vercel.app/api/rooms/${roomId}`, {
         withCredentials: true, }
 );
       fetchRooms();
@@ -55,13 +55,13 @@ const ManageRooms = () => {
     try {
       if (selectedRoom) {
         await axios.put(
-          `https://glimmer-petal-ceder.glitch.me/api/rooms/${selectedRoom._id}`,
+          `https://backend-seven-lake-45.vercel.app/api/rooms/${selectedRoom._id}`,
           roomForm, {
             withCredentials: true, }
     
         );
       } else {
-        await axios.post("https://glimmer-petal-ceder.glitch.me/api/rooms/", roomForm, {
+        await axios.post("https://backend-seven-lake-45.vercel.app/api/rooms/", roomForm, {
           withCredentials: true, }
   );
       }

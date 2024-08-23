@@ -6,7 +6,7 @@ const Reviews = () => {
 
   useEffect(() => {
     axios
-      .get("https://glimmer-petal-ceder.glitch.me/api/reviews/", {
+      .get("https://backend-seven-lake-45.vercel.app/api/reviews/", {
         withCredentials: true, }
 )
       .then((response) => {

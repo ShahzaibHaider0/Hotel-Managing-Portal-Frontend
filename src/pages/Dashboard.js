@@ -19,7 +19,7 @@ const Dashboard = () => {
     console.log("Token retrieved in Admin Portal:", Cookies.get("token"));
 
     axios
-      .get("https://glimmer-petal-ceder.glitch.me/api/admin/dashboard", {
+      .get("https://backend-seven-lake-45.vercel.app/api/admin/dashboard", {
         headers: {
           Authorization: `Bearer ${token}`, // Send token as Bearer token
         },
